@@ -1,6 +1,11 @@
 package HowNowBrownCow.Map;
 
-class Country {
-    String name;
-    String language;
+public class Country {
+    public String name;
+    public String language;
+
+    public Country(String name, String language){
+        this.name = name;
+        this.language = language;
+    }
 }
