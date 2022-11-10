@@ -9,11 +9,13 @@ import HowNowBrownCow.Map.Location;
 import HowNowBrownCow.Map.LocationTypes.LanguageCenter;
 
 class Engine {
-    public Location createSampleMap(){
+    public ArrayList<Location> createSampleMap(){
         Country spain = new Country("Spain", "Spanish");
         City sevilla = new City("Sevilla", spain);
-        Location ISA = new LanguageCenter("ISA", sevilla, "Spanish");
-        return ISA;
+
+        ArrayList<Location> locations = new ArrayList<Location>();
+        locations.add(new LanguageCenter("ISA", sevilla, "Spanish"));
+        return locations;
     }
 
     // This will be changed to handle character creation in our actual game window
@@ -27,8 +29,8 @@ class Engine {
     }
 
     public void game(){
-        Location startingLocation = createSampleMap();
-        Player player = characterCreation(startingLocation);
+        ArrayList<Location> locations = createSampleMap();
+        Player player = characterCreation(locations.get(0));
     }
 
     public void initialize(){

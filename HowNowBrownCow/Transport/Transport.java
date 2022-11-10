@@ -2,7 +2,7 @@ package HowNowBrownCow.Transport;
 
 import HowNowBrownCow.Map.LocationTypes.TravelCenter;
 
-class Transport {
+public class Transport {
     String name;
     TravelCenter departureCity;
     TravelCenter arrivalCity;
